@@ -17,10 +17,11 @@ export default function App() {
     <QueryClientProvider client={queryClient}>
       <div>
         <h1>App</h1>
-        <a href="/profile">Profile</a>
-        <a href="/login">Login</a>
-        <a href="/logout">Logout</a>
-        <Button text="Test" onClick={(e) => alert("hello")} />
+        <nav style={{ display: 'flex', gap: '1em' }}>
+          <a href="/profile">Profile</a>
+          <a href="/login">Login</a>
+          <a href="/logout">Logout</a>
+        </nav>
 
         <ThingList />
       </div>
