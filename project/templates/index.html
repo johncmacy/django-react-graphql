@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block body %}
+    <div id="app"></div>
+{% endblock %}
+
+{% block static %}
+    <script src="{% static 'js/frontend-build.js' %}"></script>
+{% endblock %}
