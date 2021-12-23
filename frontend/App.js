@@ -1,32 +1,21 @@
 import React from 'react'
-import { QueryClient, QueryClientProvider } from 'react-query'
-import { ReactQueryDevtools } from 'react-query/devtools'
-import Button from './components/Button'
 import ThingList from './components/things/ThingList'
 
 export default function App() {
-  const queryClient = new QueryClient({
-    defaultOptions: {
-      queries: {
-        refetchOnWindowFocus: false,
-      }
-    }
-  })
-
   return (
-    <QueryClientProvider client={queryClient}>
-      <div>
-        <h1>App</h1>
-        <nav style={{ display: 'flex', gap: '1em' }}>
-          <a href="/profile">Profile</a>
-          <a href="/login">Login</a>
-          <a href="/logout">Logout</a>
-        </nav>
+    <div>
+      <h1>App</h1>
+      <nav style={{ display: 'flex', gap: '1em' }}>
+        <a href="/profile">Profile</a>
+        <a href="/api">API</a>
+        <a href="/login">Login</a>
+        <a href="/logout">Logout</a>
+        <a href="/admin">Admin</a>
+      </nav>
 
-        <ThingList />
-      </div>
+      <hr />
 
-      <ReactQueryDevtools initialIsOpen={false} />
-    </QueryClientProvider>
+      <ThingList />
+    </div>
   )
 }

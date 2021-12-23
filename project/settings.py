@@ -26,7 +26,6 @@ INSTALLED_APPS = [
 
     'users.apps.UsersConfig',
     'core.apps.CoreConfig',
-    'api.apps.ApiConfig',
 ]
 
 MIDDLEWARE = [
@@ -107,3 +106,7 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = 'media'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+GRAPHENE = {
+    "SCHEMA": "project.schema.schema"
+}
